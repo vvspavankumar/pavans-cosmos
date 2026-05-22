@@ -4,7 +4,7 @@ import {
   SiPython,
   SiJavascript,
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiReact,
   SiNodedotjs,
   SiMysql,
@@ -14,11 +14,9 @@ import {
   SiGithub,
   SiGooglechrome,
   SiJupyter,
-  SiTensorflow,
   SiScikitlearn,
   SiPandas,
   SiNumpy,
-  SiAmazon,
 } from "react-icons/si";
 import { FaJava, FaAws } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
