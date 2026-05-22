@@ -1,36 +1,27 @@
 import { motion } from "framer-motion";
+import { Code2, Layout, Database, Brain } from "lucide-react";
 import { Section } from "./Section";
 
 const groups = [
   {
     title: "Programming",
-    skills: [
-      { name: "Java (OOP, DSA)", level: 88 },
-      { name: "Python", level: 82 },
-      { name: "C", level: 75 },
-    ],
+    icon: Code2,
+    skills: ["Java (OOP, DSA)", "Python", "C"],
   },
   {
     title: "Frontend",
-    skills: [
-      { name: "HTML", level: 92 },
-      { name: "CSS", level: 88 },
-      { name: "JavaScript", level: 82 },
-    ],
+    icon: Layout,
+    skills: ["HTML", "CSS", "JavaScript"],
   },
   {
     title: "Database & Cloud",
-    skills: [
-      { name: "MySQL", level: 80 },
-      { name: "AWS Cloud", level: 75 },
-    ],
+    icon: Database,
+    skills: ["MySQL", "AWS Cloud"],
   },
   {
     title: "AI / ML",
-    skills: [
-      { name: "Machine Learning Basics", level: 72 },
-      { name: "Artificial Intelligence Basics", level: 70 },
-    ],
+    icon: Brain,
+    skills: ["Machine Learning Basics", "Artificial Intelligence Basics"],
   },
 ];
 
@@ -54,27 +45,20 @@ export function Skills() {
             transition={{ duration: 0.5, delay: i * 0.1 }}
             className="glass-strong rounded-2xl p-6"
           >
-            <h3 className="font-display text-lg mb-5 flex items-center gap-2">
-              <span className="w-1.5 h-6 rounded-full gradient-bg" />
+            <h3 className="font-display text-lg mb-5 flex items-center gap-3">
+              <span className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center">
+                <g.icon size={18} className="text-primary-foreground" />
+              </span>
               {g.title}
             </h3>
-            <div className="space-y-4">
+            <div className="flex flex-wrap gap-2">
               {g.skills.map((s) => (
-                <div key={s.name}>
-                  <div className="flex justify-between text-sm mb-1.5">
-                    <span className="text-foreground">{s.name}</span>
-                    <span className="text-muted-foreground font-mono text-xs">{s.level}%</span>
-                  </div>
-                  <div className="h-2 rounded-full bg-muted overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${s.level}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1.2, ease: "easeOut" }}
-                      className="h-full skill-bar rounded-full"
-                    />
-                  </div>
-                </div>
+                <span
+                  key={s}
+                  className="px-3 py-1.5 rounded-lg glass text-sm text-foreground hover:bg-white/10 hover:scale-105 transition-smooth cursor-default"
+                >
+                  {s}
+                </span>
               ))}
             </div>
           </motion.div>

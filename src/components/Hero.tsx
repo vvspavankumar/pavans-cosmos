@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "@tanstack/react-router";
 import { Github, Linkedin, Mail, Download, ArrowRight } from "lucide-react";
 import avatar from "@/assets/avatar.jpg";
 
@@ -70,24 +71,24 @@ export function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-3 mb-8">
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="group inline-flex items-center gap-2 gradient-bg text-primary-foreground font-medium px-6 py-3 rounded-xl glow hover:glow-lg transition-smooth hover:-translate-y-0.5"
             >
               <Download size={16} /> Download Resume
-            </a>
-            <a
-              href="#projects"
+            </Link>
+            <Link
+              to="/projects"
               className="inline-flex items-center gap-2 glass-strong px-6 py-3 rounded-xl text-foreground hover:bg-white/10 transition-smooth hover:-translate-y-0.5"
             >
               View Projects <ArrowRight size={16} />
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              to="/contact"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border text-foreground hover:bg-white/5 transition-smooth"
             >
               <Mail size={16} /> Contact Me
-            </a>
+            </Link>
           </div>
 
           <div className="flex items-center gap-3">
