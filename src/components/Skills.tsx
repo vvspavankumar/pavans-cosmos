@@ -30,7 +30,7 @@ const skills: Chip[] = [
   { name: "Python", icon: <SiPython />, color: "#3776AB" },
   { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
   { name: "HTML5", icon: <SiHtml5 />, color: "#E34F26" },
-  { name: "CSS3", icon: <SiCss3 />, color: "#1572B6" },
+  { name: "CSS3", icon: <SiCss />, color: "#1572B6" },
   { name: "React.js", icon: <SiReact />, color: "#61DAFB" },
   { name: "Node.js", icon: <SiNodedotjs />, color: "#8CC84B" },
   { name: "MySQL", icon: <SiMysql />, color: "#4479A1" },
@@ -48,7 +48,7 @@ const tools: Chip[] = [
   { name: "Postman", icon: <SiPostman />, color: "#FF6C37" },
   { name: "Jupyter Notebook", icon: <SiJupyter />, color: "#F37626" },
   { name: "Google Chrome", icon: <SiGooglechrome />, color: "#4285F4" },
-  { name: "AWS Console", icon: <SiAmazon />, color: "#FF9900" },
+  { name: "AWS Console", icon: <FaAws />, color: "#FF9900" },
 ];
 
 const soft = ["Communication", "Leadership", "Teamwork", "Time Management"];
