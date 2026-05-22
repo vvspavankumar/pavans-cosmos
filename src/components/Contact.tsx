@@ -9,7 +9,7 @@ export function Contact() {
   return (
     <Section
       id="contact"
-      eyebrow="// contact"
+      
       title={<>Let's <span className="gradient-text">connect</span></>}
       subtitle="Open to internships, collaborations and interesting conversations."
     >

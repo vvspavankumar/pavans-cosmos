@@ -11,12 +11,11 @@ const traits = [
 
 export function About() {
   return (
-    <Section
-      id="about"
-      eyebrow="// about-me"
-      title={<>A bit <span className="gradient-text">about me</span></>}
-      subtitle="A Computer Science Engineering student driven by curiosity and a love for building."
-    >
+   <Section
+  id="about"
+  title={<>A bit <span className="gradient-text">about me</span></>}
+  subtitle="A Computer Science Engineering student driven by curiosity and a love for building."
+>
       <div className="grid md:grid-cols-[1.1fr_1fr] gap-8 items-start">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -43,8 +42,8 @@ export function About() {
           <div className="grid grid-cols-3 gap-3 mt-8">
             {[
               { k: "9.1", l: "CGPA" },
-              { k: "10+", l: "Projects" },
-              { k: "6+", l: "Certifications" },
+              { k: "4+", l: "Projects" },
+              { k: "5+", l: "Certifications" },
             ].map((s) => (
               <div key={s.l} className="glass rounded-2xl p-4 text-center">
                 <div className="text-2xl font-bold gradient-text">{s.k}</div>

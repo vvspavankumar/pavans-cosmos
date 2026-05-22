@@ -15,8 +15,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="text-center md:text-left">
           <div className="font-display text-lg font-bold">
-            <span className="gradient-text">VVSP</span>
-            <span className="text-foreground">.dev</span>
+            <span className="gradient-text">VVSPK</span>
           </div>
           <p className="text-xs text-muted-foreground mt-1">
             © {new Date().getFullYear()} Vedasistla Venkata Sai Pavan Kumar. Crafted with care.

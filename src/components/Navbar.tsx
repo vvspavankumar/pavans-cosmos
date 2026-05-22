@@ -9,6 +9,7 @@ const links = [
   { to: "/skills", label: "Skills" },
   { to: "/projects", label: "Projects" },
   { to: "/education", label: "Education" },
+  { to: "/resume", label: "Resume" },
   { to: "/certifications", label: "Awards" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -39,8 +40,8 @@ export function Navbar() {
       <div className="mx-auto max-w-6xl px-4">
         <div className={`flex items-center justify-between rounded-2xl px-5 py-3 transition-smooth ${scrolled ? "glass-strong" : ""}`}>
           <Link to="/" className="font-display text-lg font-bold">
-            <span className="gradient-text">VVSP</span>
-            <span className="text-foreground">.dev</span>
+            <span className="gradient-text">VVSPK</span>
+            
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">

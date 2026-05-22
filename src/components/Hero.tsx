@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
+
 import { Github, Linkedin, Mail, Download, ArrowRight } from "lucide-react";
 import avatar from "@/assets/avatar.jpg";
 
 const titles = [
   "Aspiring Software Developer",
-  "Java Developer",
+  "Java & Full Stack Developer",
   "Data Analytics Enthusiast",
   "AWS Cloud Learner",
 ];
@@ -71,12 +72,12 @@ export function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-3 mb-8">
-            <Link
-              to="/contact"
-              className="group inline-flex items-center gap-2 gradient-bg text-primary-foreground font-medium px-6 py-3 rounded-xl glow hover:glow-lg transition-smooth hover:-translate-y-0.5"
-            >
-              <Download size={16} /> Download Resume
-            </Link>
+         <Link
+  to="/resume"
+  className="gradient-bg text-primary-foreground px-6 py-3 rounded-xl"
+>
+  Download Resume
+</Link>
             <Link
               to="/projects"
               className="inline-flex items-center gap-2 glass-strong px-6 py-3 rounded-xl text-foreground hover:bg-white/10 transition-smooth hover:-translate-y-0.5"

@@ -9,7 +9,7 @@ export function Section({
   children,
 }: {
   id: string;
-  eyebrow: string;
+  eyebrow?: string;
   title: ReactNode;
   subtitle?: string;
   children: ReactNode;
@@ -24,9 +24,11 @@ export function Section({
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <div className="inline-block glass px-4 py-1 rounded-full text-xs text-primary font-mono mb-4">
-            {eyebrow}
-          </div>
+       {eyebrow && (
+  <div className="inline-block glass px-4 py-1 rounded-full text-xs text-primary font-mono mb-4">
+    {eyebrow}
+  </div>
+)}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3">{title}</h2>
           {subtitle && (
             <p className="text-muted-foreground max-w-2xl mx-auto">{subtitle}</p>

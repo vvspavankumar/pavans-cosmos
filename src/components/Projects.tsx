@@ -36,7 +36,6 @@ export function Projects() {
   return (
     <Section
       id="projects"
-      eyebrow="// projects"
       title={<>Selected <span className="gradient-text">work</span></>}
       subtitle="Real applications built across web, ML and cloud."
     >

@@ -99,7 +99,7 @@ export function Skills() {
   return (
     <Section
       id="skills"
-      eyebrow="// skills"
+      
       title={<>Professional <span className="gradient-text">Skillset</span></>}
       subtitle="Languages, frameworks, and platforms I work with across web, ML, and cloud."
     >

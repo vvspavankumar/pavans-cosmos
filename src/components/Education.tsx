@@ -27,7 +27,7 @@ export function Education() {
   return (
     <Section
       id="education"
-      eyebrow="// education"
+    
       title={<>Academic <span className="gradient-text">journey</span></>}
     >
       <div className="relative">

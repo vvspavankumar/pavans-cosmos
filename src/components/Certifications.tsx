@@ -15,7 +15,7 @@ export function Certifications() {
   return (
     <Section
       id="certifications"
-      eyebrow="// achievements"
+    
       title={<>Certifications & <span className="gradient-text">awards</span></>}
       subtitle="Recognitions and credentials I've earned along the way."
     >
