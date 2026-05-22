@@ -128,16 +128,7 @@ export function Skills() {
           <span className="w-1.5 h-6 rounded-full gradient-bg" />
           Soft Skills
         </h3>
-        <div className="flex flex-wrap justify-center gap-2">
-          {soft.map((s) => (
-            <span
-              key={s}
-              className="px-4 py-2 rounded-full glass text-sm text-foreground hover:bg-white/10 hover:scale-105 transition-smooth cursor-default"
-            >
-              {s}
-            </span>
-          ))}
-        </div>
+        <ChipGrid items={soft} />
       </motion.div>
     </Section>
   );
