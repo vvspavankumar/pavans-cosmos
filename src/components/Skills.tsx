@@ -20,6 +20,7 @@ import {
 } from "react-icons/si";
 import { FaJava, FaAws } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
+import { MessagesSquare, Crown, Users, Clock } from "lucide-react";
 import { Section } from "./Section";
 
 type Chip = { name: string; icon: React.ReactNode; color: string };
