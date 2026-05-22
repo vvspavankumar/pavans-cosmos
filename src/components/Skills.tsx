@@ -52,7 +52,12 @@ const tools: Chip[] = [
   { name: "AWS Console", icon: <FaAws />, color: "#FF9900" },
 ];
 
-const soft = ["Communication", "Leadership", "Teamwork", "Time Management"];
+const soft: Chip[] = [
+  { name: "Communication", icon: <MessagesSquare />, color: "#38BDF8" },
+  { name: "Leadership", icon: <Crown />, color: "#FBBF24" },
+  { name: "Teamwork", icon: <Users />, color: "#4ADE80" },
+  { name: "Time Management", icon: <Clock />, color: "#F87171" },
+];
 
 function ChipGrid({ items }: { items: Chip[] }) {
   return (
