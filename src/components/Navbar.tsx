@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "@tanstack/react-router";
 import { Moon, Sun, Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
-  { href: "#education", label: "Education" },
-  { href: "#certifications", label: "Awards" },
-  { href: "#contact", label: "Contact" },
-];
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/skills", label: "Skills" },
+  { to: "/projects", label: "Projects" },
+  { to: "/education", label: "Education" },
+  { to: "/certifications", label: "Awards" },
+  { to: "/contact", label: "Contact" },
+] as const;
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -33,26 +34,26 @@ export function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
-        scrolled ? "py-3" : "py-5"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${scrolled ? "py-3" : "py-5"}`}
     >
-      <div className={`mx-auto max-w-6xl px-4 ${scrolled ? "" : ""}`}>
+      <div className="mx-auto max-w-6xl px-4">
         <div className={`flex items-center justify-between rounded-2xl px-5 py-3 transition-smooth ${scrolled ? "glass-strong" : ""}`}>
-          <a href="#home" className="font-display text-lg font-bold">
+          <Link to="/" className="font-display text-lg font-bold">
             <span className="gradient-text">VVSP</span>
             <span className="text-foreground">.dev</span>
-          </a>
+          </Link>
 
           <div className="hidden lg:flex items-center gap-1">
             {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-smooth rounded-lg hover:bg-white/5"
+              <Link
+                key={l.to}
+                to={l.to}
+                activeOptions={{ exact: true }}
+                activeProps={{ className: "px-3 py-2 text-sm text-foreground rounded-lg bg-white/10" }}
+                inactiveProps={{ className: "px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-smooth rounded-lg hover:bg-white/5" }}
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -81,14 +82,16 @@ export function Navbar() {
             className="lg:hidden mt-2 glass-strong rounded-2xl p-4 flex flex-col gap-1"
           >
             {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
+              <Link
+                key={l.to}
+                to={l.to}
+                activeOptions={{ exact: true }}
                 onClick={() => setOpen(false)}
-                className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground rounded-lg hover:bg-white/5"
+                activeProps={{ className: "px-3 py-2 text-sm text-foreground rounded-lg bg-white/10" }}
+                inactiveProps={{ className: "px-3 py-2 text-sm text-muted-foreground hover:text-foreground rounded-lg hover:bg-white/5" }}
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </motion.div>
         )}

@@ -9,6 +9,9 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { ParticleBackground } from "@/components/ParticleBackground";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 function NotFoundComponent() {
   return (
@@ -72,19 +75,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Vedasistla Venkata Sai Pavan Kumar — Portfolio" },
+      { name: "description", content: "Portfolio of Vedasistla Venkata Sai Pavan Kumar — Java · Web · AWS · ML." },
+      { name: "author", content: "Vedasistla Venkata Sai Pavan Kumar" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap",
       },
     ],
   }),
@@ -113,7 +114,12 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <ParticleBackground />
+      <Navbar />
+      <main className="min-h-screen">
+        <Outlet />
+      </main>
+      <Footer />
     </QueryClientProvider>
   );
 }

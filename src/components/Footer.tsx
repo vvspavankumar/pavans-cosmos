@@ -1,12 +1,13 @@
+import { Link } from "@tanstack/react-router";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
-  { href: "#education", label: "Education" },
-  { href: "#contact", label: "Contact" },
-];
+  { to: "/about", label: "About" },
+  { to: "/skills", label: "Skills" },
+  { to: "/projects", label: "Projects" },
+  { to: "/education", label: "Education" },
+  { to: "/contact", label: "Contact" },
+] as const;
 
 export function Footer() {
   return (
@@ -24,40 +25,24 @@ export function Footer() {
 
         <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
           {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
+            <Link
+              key={l.to}
+              to={l.to}
               className="text-sm text-muted-foreground hover:text-foreground transition-smooth"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
         </div>
 
         <div className="flex gap-2">
-          <a
-            href="https://github.com/vvspavankumar"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="GitHub"
-            className="p-2 glass rounded-lg hover:scale-110 hover:text-primary transition-smooth"
-          >
+          <a href="https://github.com/vvspavankumar" target="_blank" rel="noreferrer" aria-label="GitHub" className="p-2 glass rounded-lg hover:scale-110 hover:text-primary transition-smooth">
             <Github size={16} />
           </a>
-          <a
-            href="https://linkedin.com/in/pavan-kumar-vedasistla-venkata-sai-a3590a2ba"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="LinkedIn"
-            className="p-2 glass rounded-lg hover:scale-110 hover:text-primary transition-smooth"
-          >
+          <a href="https://linkedin.com/in/pavan-kumar-vedasistla-venkata-sai-a3590a2ba" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="p-2 glass rounded-lg hover:scale-110 hover:text-primary transition-smooth">
             <Linkedin size={16} />
           </a>
-          <a
-            href="mailto:pavanvedasistla@gmail.com"
-            aria-label="Email"
-            className="p-2 glass rounded-lg hover:scale-110 hover:text-primary transition-smooth"
-          >
+          <a href="mailto:pavanvedasistla@gmail.com" aria-label="Email" className="p-2 glass rounded-lg hover:scale-110 hover:text-primary transition-smooth">
             <Mail size={16} />
           </a>
         </div>
